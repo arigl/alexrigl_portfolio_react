@@ -1,17 +1,17 @@
 import React, { FC, useState } from 'react';
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+// import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import Project from './subcomponents/project';
-import IMAGES from '@/images/IMAGES';
+// import IMAGES from '@/images/IMAGES';
 import projectData from './data/projectData';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination"
+// import {
+//   Pagination,
+//   PaginationContent,
+//   PaginationEllipsis,
+//   PaginationItem,
+//   PaginationLink,
+//   PaginationNext,
+//   PaginationPrevious,
+// } from "@/components/ui/pagination"
 
 interface ProjectProps {
   // Define props and their types here
@@ -24,10 +24,10 @@ interface ProjectProps {
 const Projects: FC<ProjectProps> = (props) => {
   // Destructure props here if needed
   // Example: const { propName } = props;
-  const stringArray = 
-  [
-    'ThreeJS'
-  ];
+  // const stringArray = 
+  // [
+  //   'ThreeJS'
+  // ];
 
   return (
     <div className='p-6 max-w-m mx-auto bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4 mb-4'>

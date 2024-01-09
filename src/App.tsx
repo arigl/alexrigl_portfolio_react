@@ -7,7 +7,7 @@ import Projects from './components/projects'
 import ProjectPopup from './components/subcomponents/projectPopup'
 import projectData from './components/data/projectData'
 import Vara from 'vara';
-import React, {useState, useEffect } from 'react';
+import {useState, useEffect } from 'react';
 import { ThemeProvider } from "@/components/theme-provider"
 
 
@@ -81,7 +81,6 @@ function App() {
       
       {showPopup && (
         <ProjectPopup
-          id={projectData[currentProject].id}
           projectName={projectData[currentProject].projectName}
           description={projectData[currentProject].description}
           frameworks={projectData[currentProject].frameworks}

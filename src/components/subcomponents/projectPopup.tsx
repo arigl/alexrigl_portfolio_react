@@ -29,10 +29,10 @@ import { Separator } from "@/components/ui/separator"
 function ProjectPopup(props: {
   projectName: string;
   description: string;
-  frameworks: [];
+  frameworks: string[];
   website: string;
   imagePath: string;
-  slideImages: [string];
+  slideImages: string[];
   currentProject: number;
   setCurrentProject: React.Dispatch<React.SetStateAction<number>>;
   showPopup: boolean;

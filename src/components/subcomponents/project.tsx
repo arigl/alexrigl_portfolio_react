@@ -9,10 +9,10 @@ function Project(props: {
   id: number;
   projectName: string;
   description: string;
-  frameworks: [];
+  frameworks: string[];
   website: string;
   imagePath: string;
-  slideImages: [string];
+  slideImages: string[];
   showPopup: boolean;
   setShowPopup: React.Dispatch<React.SetStateAction<boolean>>;
   currentProject: number;
