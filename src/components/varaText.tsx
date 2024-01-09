@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, {useEffect} from 'react';
 import Vara from 'vara';
 
 function VaraText({ text }: { text: string }) {

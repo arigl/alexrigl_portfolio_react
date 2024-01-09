@@ -5,19 +5,15 @@ import Tools from './components/tools'
 import Experience from './components/experience'
 import Projects from './components/projects'
 import ProjectPopup from './components/subcomponents/projectPopup'
-import Project from './components/subcomponents/project'
 import projectData from './components/data/projectData'
 import Vara from 'vara';
-import React, { FC, useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import { ThemeProvider } from "@/components/theme-provider"
 
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [currentProject, setCurrentProject] = useState(0)
-  const [showTextAnim, setShowTextAnim] = useState(true)
-  const [count, setCount] = useState(0)
-  const [showEmail, setShowEmail] = useState(false);
 
   function VaraText({ text }: { text: string }) {
     const containerId = `vara-container-${text.replace(/\s/g, '')}`; // Generate a unique ID based on the text

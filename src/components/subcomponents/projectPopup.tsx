@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 
 import { Badge } from "@/components/ui/badge"
-import IMAGES from '@/images/IMAGES';
+// import IMAGES from '@/images/IMAGES';
 import projectData from '../data/projectData';
 
 import {
@@ -17,10 +17,10 @@ import {
 import {
     Card,
     CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+    // CardDescription,
+    // CardFooter,
+    // CardHeader,
+    // CardTitle,
 } from "@/components/ui/card"
 
 import { Separator } from "@/components/ui/separator"

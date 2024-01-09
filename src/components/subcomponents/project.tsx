@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
-import IMAGES from '@/images/IMAGES';
+import React from 'react';
+// import { Separator } from "@/components/ui/separator"
+// import { Button } from "@/components/ui/button"
+// import IMAGES from '@/images/IMAGES';
 import { Badge } from "@/components/ui/badge"
 
 

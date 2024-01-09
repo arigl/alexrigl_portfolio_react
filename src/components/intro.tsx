@@ -4,8 +4,8 @@ import {
     HoverCardContent,
     HoverCardTrigger,
   } from "@/components/ui/hover-card"
-import { Separator } from "@/components/ui/separator"
-import { ModeToggle } from './modeToggle';
+// import { Separator } from "@/components/ui/separator"
+// import { ModeToggle } from './modeToggle';
 
 interface IntroProps {
   // Define props and their types here

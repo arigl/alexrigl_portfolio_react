@@ -7,7 +7,6 @@
     showPopup: boolean;
 */
 import IMAGES from "@/images/IMAGES";
-
 const projectData = [
     {
       id: 0,
