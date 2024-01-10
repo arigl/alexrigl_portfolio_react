@@ -6,7 +6,9 @@
     imagePath: string;
     showPopup: boolean;
 */
-import IMAGES from "@/images/IMAGES";
+//import IMAGES from "@/images/IMAGES";
+import IMAGES from "./images";
+
 const projectData = [
     {
       id: 0,

@@ -1,7 +1,7 @@
 // import { Button } from "@/components/ui/button"
 import Job from './subcomponents/job';
 import jobData from './data/jobData';
-import IMAGES from '@/images/IMAGES';
+import IMAGES from './data/images';
 
 function Experience() {
   return (

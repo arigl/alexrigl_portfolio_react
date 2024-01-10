@@ -1,6 +1,5 @@
 // import { FC } from 'react';
-import IMAGES from '../images/IMAGES'
-
+import IMAGES from "./data/images";
 import {
     Carousel,
     CarouselContent,
