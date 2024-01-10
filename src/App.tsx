@@ -64,8 +64,8 @@ function App() {
   const handleDownload = async () => {
     // Specify the path to the file in the public directory
     console.log("download")
-    const filePath = process.env.PUBLIC_URL + '/vite.svg';
-    //const filePath = '/resume.pdf';
+    //const filePath = process.env.PUBLIC_URL + '/vite.svg';
+    const filePath = '/resume.pdf';
 
     try {
       // Fetch the file using the path
