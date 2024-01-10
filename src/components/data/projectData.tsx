@@ -35,7 +35,7 @@ const projectData = [
       frameworks: ['Wordpress', 'Mobile','UI Design'],
       website: 'www.hexmos.com',
       imagePath: IMAGES.sbLogo,
-      slideImages: [IMAGES.sb1,IMAGES.sb2,IMAGES.sb3,IMAGES.sb4]
+      slideImages: [IMAGES.sb1,IMAGES.sb1,IMAGES.sb1,IMAGES.sb1]
     },
     {
       id: 3,

@@ -42,6 +42,16 @@ function ProjectPopup(props: {
     console.log("close popup")
     props.setShowPopup(false);
   };
+  const setPrevProject = () => {
+    if(props.currentProject != 0){
+      props.setCurrentProject(prev => prev-1)
+    }
+  };
+  const setNextProject = () => {
+    if(props.currentProject < projectData.length-1){
+      props.setCurrentProject(prev => prev+1)
+    }
+  };
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -67,7 +77,7 @@ function ProjectPopup(props: {
                               <CarouselItem key={index}>
                                   <Card>
                                       <CardContent className="flex items-center justify-center">
-                                      <img src={props.slideImages[index]} loading="lazy" alt='first image' className="fill rounded-lg mt-2 ml-2 mr-2 mb-2 max-h-1/2 " />
+                                      <img src={projectData[props.currentProject].slideImages[index]} loading="lazy" alt='first image' className="fill rounded-lg mt-2 ml-2 mr-2 mb-2 max-h-1/2 " />
                                       </CardContent>
                                   </Card>
                               </CarouselItem>
@@ -99,8 +109,20 @@ function ProjectPopup(props: {
               <div className='flex flex-col justify-between h-max mb-10 ml-10 mr-10'>
                   <Separator className='mt-20 mb-5'></Separator>
                   <div className='flex flex-row justify-between'>
-                      <button onClick={closePopup} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-2">Previous Project</button>
-                      <button onClick={closePopup} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mr-2">Next Project</button>
+                      {props.currentProject == 0 && (
+                        <button className="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded ml-2 opacity-50">Previous Project</button>
+                      )}
+                      {props.currentProject != 0 && (
+                        <button onClick={setPrevProject} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-2">Previous Project</button>
+                      )}
+                      {props.currentProject == projectData.length - 1 && (
+                        <button onClick={setNextProject} className="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded mr-2 opacity-50">Next Project</button>
+                      )}
+                      {props.currentProject != projectData.length - 1 && (
+                        <button onClick={setNextProject} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mr-2">Next Project</button>
+                      )}
+                      {/* <button onClick={setPrevProject} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded ml-2">Previous Project</button> */}
+                      {/* <button onClick={setNextProject} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mr-2">Next Project</button> */}
                   </div>
               </div> 
             
