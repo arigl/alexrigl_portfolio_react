@@ -60,6 +60,41 @@ function App() {
     
     return () => clearTimeout(timer);
   }, [showPopup]);
+
+  const handleDownload = async () => {
+    // Specify the path to the file in the public directory
+    console.log("download")
+    const filePath = process.env.PUBLIC_URL + '/vite.svg';
+    //const filePath = '/resume.pdf';
+
+    try {
+      // Fetch the file using the path
+      const response = await fetch(filePath);
+
+      // Get the blob representation of the file
+      const blob = await response.blob();
+
+      // Create a link element
+      const link = document.createElement('a');
+
+      // Set the href attribute to the Blob object
+      link.href = window.URL.createObjectURL(blob);
+
+      // Set the download attribute with the desired file name
+      link.download = 'Alex_Rigl_Resume.pdf';
+
+      // Append the link to the document
+      document.body.appendChild(link);
+
+      // Trigger a click on the link to start the download
+      link.click();
+
+      // Remove the link from the document
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading the file:', error);
+    }
+  };
   return (
     <>
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
@@ -107,7 +142,7 @@ function App() {
           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Email</h1>
           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-black-500'>alexrigl@gmail.com</h1>
           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Resume</h1>
-          <button className='p-1 text-white max-w-m bg-black hover:bg-black rounded-xl shadow-lg items-center space-x-4'>
+          <button onClick={handleDownload} className='p-1 text-white max-w-m bg-black hover:bg-black rounded-xl shadow-lg items-center space-x-4'>
                     Download
           </button>
         </div>
