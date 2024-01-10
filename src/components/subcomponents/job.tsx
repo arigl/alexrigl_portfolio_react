@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import {useState } from 'react';
 import { Separator } from "@/components/ui/separator"
 // import { Button } from "@/components/ui/button"
 // import IMAGES from '@/images/IMAGES';

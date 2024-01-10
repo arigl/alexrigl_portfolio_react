@@ -1,10 +1,4 @@
-import React, { FC } from 'react';
-
-interface AboutProps {
-  // Define props and their types here
-}
-
-const About: FC<AboutProps> = (props) => {
+function About(){
   // Destructure props here if needed
   // Example: const { propName } = props;
 

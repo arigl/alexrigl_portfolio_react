@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 
 import { Badge } from "@/components/ui/badge"
 // import IMAGES from '@/images/IMAGES';
@@ -8,9 +8,9 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
+    // CarouselNext,
     CarouselNext2,
-    CarouselPrevious,
+    // CarouselPrevious,
     CarouselPrevious2
   } from "@/components/ui/carousel"
 

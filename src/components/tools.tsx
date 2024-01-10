@@ -1,4 +1,4 @@
-import { FC } from 'react';
+// import { FC } from 'react';
 import IMAGES from '../images/IMAGES'
 
 import {
@@ -23,9 +23,9 @@ import {
 } from "@/components/ui/card"
   
   
-interface ToolProps {
-  // Define props and their types here
-}
+// interface ToolProps {
+//   // Define props and their types here
+// }
 
 function Tools(){
   // Destructure props here if needed

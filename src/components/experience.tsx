@@ -1,14 +1,9 @@
-import React, { FC, useState } from 'react';
 // import { Button } from "@/components/ui/button"
 import Job from './subcomponents/job';
 import jobData from './data/jobData';
 import IMAGES from '@/images/IMAGES';
 
-interface ExperienceProps {
-  // Define props and their types here
-}
-
-const Experience: FC<ExperienceProps> = (props) => {
+function Experience() {
   return (
     <div className='p-6 max-w-m mx-auto bg-white rounded-xl shadow-lg flex flex-col items-center space-x-4 mb-4'>
       <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Work Experience</h1>

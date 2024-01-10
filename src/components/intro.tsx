@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import {
     HoverCard,
     HoverCardContent,
@@ -7,11 +6,7 @@ import {
 // import { Separator } from "@/components/ui/separator"
 // import { ModeToggle } from './modeToggle';
 
-interface IntroProps {
-  // Define props and their types here
-}
-
-const Intro: FC<IntroProps> = (props) => {
+function Intro(){
   // Destructure props here if needed
   // Example: const { propName } = props;
 
