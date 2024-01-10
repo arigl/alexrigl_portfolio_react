@@ -18,7 +18,7 @@ const IMAGES = {
     sb2: new URL('/images/sb2.png', import.meta.url).href,
     sb3: new URL('/images/sb3.png', import.meta.url).href,
     sb4: new URL('/images/sb4.png', import.meta.url).href,
-    sbLogo: new URL('/images/sbLogo.png', import.meta.url).href,
+    sbLogo: new URL('/images/sblogo.png', import.meta.url).href,
 }
 
 export default IMAGES
