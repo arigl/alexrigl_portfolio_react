@@ -9,7 +9,7 @@ function Job(props: {
         jobDate: string;
         companyName: string;
         jobName: string;
-        jobTaskList: [];
+        jobTaskList: string[];
         jobWebsite: string;
         jobImage: string
     }){

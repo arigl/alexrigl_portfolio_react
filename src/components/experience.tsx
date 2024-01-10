@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import Job from './subcomponents/job';
 import jobData from './data/jobData';
 import IMAGES from '@/images/IMAGES';

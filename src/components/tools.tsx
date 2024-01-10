@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import IMAGES from '../images/IMAGES'
 
 import {
@@ -10,16 +10,16 @@ import {
   } from "@/components/ui/carousel"
 
 import Autoplay from "embla-carousel-autoplay"
-import AutoHeight from 'embla-carousel-auto-height'
+// import AutoHeight from 'embla-carousel-auto-height'
 
 
 import {
     Card,
     CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+    // CardDescription,
+    // CardFooter,
+    // CardHeader,
+    // CardTitle,
 } from "@/components/ui/card"
   
   
@@ -27,7 +27,7 @@ interface ToolProps {
   // Define props and their types here
 }
 
-const Tools: FC<ToolProps> = (props) => {
+function Tools(){
   // Destructure props here if needed
   // Example: const { propName } = props;
 
