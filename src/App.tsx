@@ -9,6 +9,8 @@ import projectData from './components/data/projectData'
 import Vara from 'vara';
 import {useState, useEffect } from 'react';
 import { ThemeProvider } from "@/components/theme-provider"
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 
 function App() {
@@ -112,6 +114,7 @@ function App() {
       
     </div>
     </ThemeProvider>
+    <SpeedInsights/>
      
     </>
   )
