@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,7 +7,7 @@ import projectData from '../data/projectData';
 interface CarouselProps {
   currentProject: number;
 }
-function SampleNextArrow(props) {
+function SampleNextArrow(props: { className: any; style: any; onClick: any; }) {
     const { className, style, onClick } = props;
     return (
       <div
@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
     );
 }
 
-function SamplePrevArrow(props) {
+function SamplePrevArrow(props: { className: any; style: any; onClick: any; }) {
     const { className, style, onClick } = props;
     return (
       <div
@@ -46,8 +46,8 @@ export default class Carousel extends Component<CarouselProps> {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />
+      nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined} />,
+      prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined} />
     };
     return (
       <div className=''>
