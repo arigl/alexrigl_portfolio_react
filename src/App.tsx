@@ -1,7 +1,7 @@
 import './App.css'
 import Intro from './components/intro'
 import About from './components/about'
-import Tools from './components/tools'
+// import Tools from './components/tools'
 import NewTools from './components/newtools'
 import Experience from './components/experience'
 import Projects from './components/projects'
@@ -12,7 +12,7 @@ import {useState, useEffect } from 'react';
 import { ThemeProvider } from "@/components/theme-provider"
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
-import Carousel from './components/subcomponents/Carousel'
+// import Carousel from './components/subcomponents/Carousel'
 
 
 function App() {
