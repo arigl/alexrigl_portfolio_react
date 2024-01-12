@@ -62,8 +62,6 @@ export default function NewTools() {
                 scale: 1.15,
                 transition: { duration: 1 },
             }}
-            onHoverStart={e => {duration=5}}
-            onHoverEnd={e => {duration=20}}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
             <div className="w-12 h-full absolute left-0 top-0 z-10 bg-gradient-to-r from-white to-white/0"></div>
