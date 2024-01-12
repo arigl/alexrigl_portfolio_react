@@ -96,9 +96,12 @@ function ProjectPopup(props: {
                           {Array.from({ length: props.frameworks.length }).map((_, index) => (
                                <Badge key={index} variant="outline" className='bg-black text-white mr-2 mb-2 text-white'>{props.frameworks[index]}</Badge>
                           ))}
-                         
-                          <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500 pt-2'>View Live</h1>
-                          <p>View Live</p>
+                          {props.website != "" && (
+                            <div>
+                              <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500 pt-2'>View Live</h1>
+                              <p>{props.website}</p>
+                            </div>
+                          )}
                       </div>
                       
                       <button onClick={closePopup} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">

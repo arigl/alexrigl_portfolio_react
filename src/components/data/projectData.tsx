@@ -24,7 +24,7 @@ const projectData = [
       projectName: 'PlayerX.GG Streaming',
       description: 'The PlayerX streaming portal was built as a next-generation streaming platform focused on Esports. The project was incredibly ambitious as it involved live-data collection in sync with video, highlight functionality, player stats, ad-server integrations, and a full catalog experience. This project utilized Edg.io for the live streaming infrastructure, Springserve for ad server integrations, and JWPlayer for the video player.',
       frameworks: ['Javascript', 'React', 'UI Design'],
-      website: 'www.hexmos.com',
+      website: '',
       imagePath: IMAGES.image9,
       slideImages: [IMAGES.ps1,IMAGES.ps2,IMAGES.ps3,IMAGES.ps4]
     },

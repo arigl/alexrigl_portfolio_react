@@ -107,7 +107,7 @@ function App() {
         {/* <Tools></Tools> */}
         <div className="mt-2 mb-2 pt-4 pb-4">
           <div className="flex justify-center items-center">
-            <div className="bg-white max-w-s w-full rounded-xl shadow-sm border">
+            <div className="bg-white max-w-s w-full rounded-xl shadow-sm border pt-4 pb-4">
               <NewTools></NewTools>
             </div>
           </div>

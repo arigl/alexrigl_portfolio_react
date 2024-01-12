@@ -62,6 +62,7 @@ export default class Carousel extends Component<CarouselProps> {
                     height: '100%',
                     margin: 'auto',
                     width: '100%',
+                    borderRadius: '10px',
                     }}
                 />
                 </div>
