@@ -3,7 +3,7 @@ import React, {useState, useEffect } from 'react';
 import { Badge } from "@/components/ui/badge"
 // import IMAGES from '@/images/IMAGES';
 import projectData from '../data/projectData';
-import IMAGES from '../data/images';
+// import IMAGES from '../data/images';
 
 import { Separator } from "@/components/ui/separator"
 import Carousel from './Carousel';
