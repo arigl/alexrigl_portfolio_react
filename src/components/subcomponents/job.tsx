@@ -23,7 +23,7 @@ function Job(props: {
     setExpand(prevCheck => !prevCheck);
   }
   return (
-    <div className='w-full p-4 max-w-full mx-auto bg-white rounded-xl shadow-lg flex flex-col items-left space-x-4 mb-4'>
+    <div className='w-full p-4 max-w-full mx-auto bg-white rounded-xl shadow-sm border flex flex-col items-left space-x-4 mb-4'>
         <div className='flex flex-row justify-start justify-between'>
             <div className='text-left flex flex-row'>
                 <img src={props.jobImage} loading="lazy" width="75" height="75" alt='first image' className="rounded-lg ml-2 mr-2 mb-2" />
@@ -40,11 +40,20 @@ function Job(props: {
                 )}
                  */}
             </div>
-            <div className='w-1/2 flex justify-end'>
-                <button className='p-1 mt-4 mb-4 text-white max-w-m bg-gray-500 hover:bg-black rounded-xl shadow-lg items-center space-x-4' onClick={handleClick}>
-                    Expand
-                </button>
-            </div>
+            {expandToggle && (
+                <div className='w-1/2 flex justify-end'>
+                    <button className=' p-2 pl-4 pr-4 mt-4 mb-4 text-black max-w-m bg-white shadow-sm border hover:bg-orange-500 rounded-xl items-center space-x-4' onClick={handleClick}>
+                        -	
+                    </button>
+                </div>    
+            )}
+            {expandToggle===false && (
+                <div className='w-1/2 flex justify-end'>
+                    <button className=' p-2 pl-4 pr-4 mt-4 mb-4 text-black max-w-m bg-white shadow-sm border hover:bg-orange-500 rounded-xl items-center space-x-4' onClick={handleClick}>
+                        +	
+                    </button>
+                </div>    
+            )}
         </div>   
         {expandToggle && (
             <div>

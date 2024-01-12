@@ -1,0 +1,54 @@
+/* ProjectPopup.css */
+
+.fixed {
+    position: fixed;
+  }
+  
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .transition-transform {
+    transition-property: transform;
+  }
+  
+  .duration-1000 {
+    transition-duration: 1000ms;
+  }
+  
+  .ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+  
+  .p-20 {
+    padding: 20px;
+  }
+  
+  .translate-y-0 {
+    transform: translateY(0);
+  }
+  
+  .translate-y-full {
+    transform: translateY(100%);
+  }
+  
+  /* ProjectPopup.css */
+
+/* ... (previous styles) */
+
+.closing {
+    animation: slideOut 1s ease-in-out;
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+  
+
+  
+  

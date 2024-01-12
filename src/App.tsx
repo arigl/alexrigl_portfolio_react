@@ -2,6 +2,7 @@ import './App.css'
 import Intro from './components/intro'
 import About from './components/about'
 import Tools from './components/tools'
+import NewTools from './components/newtools'
 import Experience from './components/experience'
 import Projects from './components/projects'
 import ProjectPopup from './components/subcomponents/projectPopup'
@@ -11,8 +12,7 @@ import {useState, useEffect } from 'react';
 import { ThemeProvider } from "@/components/theme-provider"
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
-
-
+import Carousel from './components/subcomponents/Carousel'
 
 
 function App() {
@@ -104,7 +104,14 @@ function App() {
         <About></About>
       </div>
       <div className={` ${showProjects ? 'transform scale-100 transition-transform duration-1000 ease-in-out delay-500' : 'transform scale-0'}`}>
-        <Tools></Tools>
+        {/* <Tools></Tools> */}
+        <div className="mt-2 mb-2 pt-4 pb-4">
+          <div className="flex justify-center items-center">
+            <div className="bg-white max-w-s w-full rounded-xl shadow-sm border">
+              <NewTools></NewTools>
+            </div>
+          </div>
+        </div>
       </div>
       <div className={` ${showProjects ? 'transform scale-100 transition-transform duration-1000 ease-in-out delay-700' : 'transform scale-0'}`}>
         <Experience></Experience>
@@ -132,7 +139,7 @@ function App() {
           setCurrentProject={setCurrentProject}
         />
       )}
-      <div className='bg-white rounded-xl shadow-lg flex gap-10 justify-center items-center p-10 flex flex-row '>
+      <div className='bg-white rounded-xl shadow-sm border flex gap-10 justify-center items-center p-10 flex flex-row '>
         <div className=''>
           <VaraText
             text='Contact Me'
@@ -142,13 +149,12 @@ function App() {
           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Email</h1>
           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-black-500'>alexrigl@gmail.com</h1>
           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Resume</h1>
-          <button onClick={handleDownload} className='p-1 text-white max-w-m bg-black hover:bg-black rounded-xl shadow-lg items-center space-x-4'>
+          <button onClick={handleDownload} className='p-1 text-white max-w-m bg-black hover:bg-orange-500 rounded-xl shadow-lg items-center space-x-4'>
                     Download
           </button>
         </div>
         
       </div>
-      
     </div>
     </ThemeProvider>
     <SpeedInsights/>

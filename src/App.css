@@ -6,3 +6,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.embla__container {
+  display: flex;
+  align-items: flex-start; /* Add this */
+}
+
+.translate-y-full {
+  transform: translateY(100%);
+}

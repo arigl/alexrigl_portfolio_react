@@ -13,29 +13,29 @@ const projectData = [
     {
       id: 0,
       projectName: 'PlayerX.GG',
-      description: '3D Based of ThreeJSJourney',
+      description: 'Lead and managed the development on the marketing site for PlayerX. We aimed to offer a unique web experience centered around content made by the brand. We developed a unique animated gallery view that shows off various media content related to the product, all backed by a Contentful CMS. This was done in collaboration with Religion Studio, who helped create and conceptalize Snapchat.',
       frameworks: ['Javascript', 'React'],
-      website: 'www.hexmos.com',
+      website: 'www.playerx.gg',
       imagePath: IMAGES.image8,
       slideImages: [IMAGES.px1,IMAGES.px2,IMAGES.px3,IMAGES.px4]
     },
     {
       id: 1,
       projectName: 'PlayerX.GG Streaming',
-      description: '3D Based of ThreeJSJourney',
+      description: 'The PlayerX streaming portal was built as a next-generation streaming platform focused on Esports. The project was incredibly ambitious as it involved live-data collection in sync with video, highlight functionality, player stats, ad-server integrations, and a full catalog experience. This project utilized Edg.io for the live streaming infrastructure, Springserve for ad server integrations, and JWPlayer for the video player.',
       frameworks: ['Javascript', 'React', 'UI Design'],
       website: 'www.hexmos.com',
       imagePath: IMAGES.image9,
-      slideImages: [IMAGES.px1,IMAGES.px2,IMAGES.px3,IMAGES.px4]
+      slideImages: [IMAGES.ps1,IMAGES.ps2,IMAGES.ps3,IMAGES.ps4]
     },
     {
       id: 2,
       projectName: 'The Suggestible Brain',
-      description: '3D Based of ThreeJSJourney',
+      description: 'The Suggestible Brain was an iOS application meant to test the suseptibility of the human mind. Through various mind tricks, the app taught the user techniques perfected by Amir Raz to trick the mind. The project was developed in Swift (UIKit), and was supported by an in-house designer for graphics. The app had various experiments, PDF reading capabilities, and a reward system for completing various objectives in the book.',
       frameworks: ['Wordpress', 'Mobile','UI Design'],
-      website: 'www.hexmos.com',
+      website: '',
       imagePath: IMAGES.sbLogo,
-      slideImages: [IMAGES.sb1,IMAGES.sb1,IMAGES.sb1,IMAGES.sb1]
+      slideImages: [IMAGES.sb1,IMAGES.sb2,IMAGES.sb3,IMAGES.sb4]
     },
     {
       id: 3,

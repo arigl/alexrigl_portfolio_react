@@ -3,27 +3,10 @@ import React, {useState, useEffect } from 'react';
 import { Badge } from "@/components/ui/badge"
 // import IMAGES from '@/images/IMAGES';
 import projectData from '../data/projectData';
-
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    // CarouselNext,
-    CarouselNext2,
-    // CarouselPrevious,
-    CarouselPrevious2
-  } from "@/components/ui/carousel"
-
-import {
-    Card,
-    CardContent,
-    // CardDescription,
-    // CardFooter,
-    // CardHeader,
-    // CardTitle,
-} from "@/components/ui/card"
+import IMAGES from '../data/images';
 
 import { Separator } from "@/components/ui/separator"
+import Carousel from './Carousel';
 
 
 function ProjectPopup(props: {
@@ -38,10 +21,6 @@ function ProjectPopup(props: {
   showPopup: boolean;
   setShowPopup: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const closePopup = () => {
-    console.log("close popup")
-    props.setShowPopup(false);
-  };
   const setPrevProject = () => {
     if(props.currentProject != 0){
       props.setCurrentProject(prev => prev-1)
@@ -52,55 +31,76 @@ function ProjectPopup(props: {
       props.setCurrentProject(prev => prev+1)
     }
   };
+  const closePopup = () => {
+    console.log("close popup");
+    setIsClosing(true);
+  
+    // Introduce a delay before setting isVisible to false
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 500); // Adjust the delay as needed
+  };
   const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  // useEffect(() => {
+  //   setIsVisible(true);
+  //   props.setShowPopup(true)
+  // }, []);
+  useEffect(() => {
+    if (props.showPopup) {
+      setIsVisible(true);
+    }
+  }, [props.showPopup]);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    if (isClosing) {
+      document.body.style.overflow = "auto";
+      setTimeout(() => {
+        setIsVisible(false);
+        setIsClosing(false);
+        props.setShowPopup(false);
+      }, 1500);
+    }
+  }, [isClosing]);
+
+  useEffect(() => {
+    // Disable scrolling when the popup is open
+    document.body.style.overflow = 'hidden';
+
+    // Enable scrolling when the popup is closed
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [props.showPopup, isVisible]);
+
+  console.log(projectData[props.currentProject].slideImages);
+
 
   return (
     <div>
       {props.showPopup && (
-        // <div className="fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-center bg-black bg-opacity-80">
-        <div className={`fixed bottom-0 left-0 w-screen h-screen flex flex-col items-center justify-center bg-white bg-opacity-100 transition-transform duration-1000 ease-in-out ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}>
-        {/* Rest of your content */}
+        <div className={`fixed bottom-0 left-0 w-screen h-screen flex flex-col bg-white bg-opacity-100 transition-transform duration-1000 ease-in-out p-20 ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}>
             <div className="flex flex-col">
-              {/* <div className={`rounded border border-gray-300 p-4 inline-flex max-w-max mb-5 ml-10`}>
-                  <span className='text-orange-500 mr-2'>⌘</span>
-                  <h1 className="font-semibold">Alex Rigl</h1>
-              </div> */}
-              <div className='flex flex-row'> 
-                  <div className='justify-center items-center ml-10'>
-                      <Carousel orientation="horizontal">
-                          <CarouselContent>
-                              {Array.from({ length: props.slideImages.length }).map((_, index) => (
-                              <CarouselItem key={index}>
-                                  <Card>
-                                      <CardContent className="flex items-center justify-center">
-                                      <img src={projectData[props.currentProject].slideImages[index]} loading="lazy" alt='first image' className="fill rounded-lg mt-2 ml-2 mr-2 mb-2 max-h-1/2 " />
-                                      </CardContent>
-                                  </Card>
-                              </CarouselItem>
-                              ))}
-                          </CarouselContent>
-                          <CarouselPrevious2 />
-                          <CarouselNext2 />
-                      </Carousel>
+              <div className='flex flex-row gap-10'> 
+                  <div className='w-1/2	'>
+                    <Carousel currentProject={props.currentProject} />
                   </div>
-                  <div className='min-w-[33.33333vw] h-max p-10 flex flex-col justify-between'>
-                      <div className='text-left'>
+                  <div className='flex flex-col justify-between'>
+                      <div className='text-left flex-grow'>
                           <h1 className='text-xs items-center font-mono font-medium text-orange-500'>Project Name</h1>
                           <h1>{projectData[props.currentProject].projectName}</h1>
                           <h1 className='text-xs items-center font-mono font-medium text-orange-500 pt-2'>Description</h1>
                           <p>{projectData[props.currentProject].description}</p>
                           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500 pt-2'>Tools</h1>
                           {Array.from({ length: props.frameworks.length }).map((_, index) => (
-                               <Badge variant="outline" className='bg-black text-white mr-2 mb-2 text-white'>{props.frameworks[index]}</Badge>
+                               <Badge key={index} variant="outline" className='bg-black text-white mr-2 mb-2 text-white'>{props.frameworks[index]}</Badge>
                           ))}
                          
                           <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500 pt-2'>View Live</h1>
                           <p>View Live</p>
                       </div>
+                      
                       <button onClick={closePopup} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
                           Close
                       </button>
