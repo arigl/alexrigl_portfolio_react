@@ -7,7 +7,7 @@ import Experience from './components/experience'
 import Projects from './components/projects'
 import ProjectPopup from './components/subcomponents/projectPopup'
 import projectData from './components/data/projectData'
-import Vara from 'vara';
+// import Vara from 'vara';
 import {useState, useEffect } from 'react';
 // import { ThemeProvider } from "@/components/theme-provider"
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -16,45 +16,46 @@ import { Analytics } from '@vercel/analytics/react';
 import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 // import Carousel from './components/subcomponents/Carousel'
-
+import VaraText from './components/varaText'
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [currentProject, setCurrentProject] = useState(0)
   const { width, height } = useWindowSize()
   const [party, setParty] = useState(false)
+  const varaContent = 'Contact Me'
 
-  function VaraText({ text }: { text: string }) {
-    const containerId = `vara-container-${text.replace(/\s/g, '')}`; // Generate a unique ID based on the text
+  // function VaraText({ text }: { text: string }) {
+  //   const containerId = `vara-container-${text.replace(/\s/g, '')}`; // Generate a unique ID based on the text
 
-    useEffect(() => {
-      const container = document.getElementById(containerId);
+  //   useEffect(() => {
+  //     const container = document.getElementById(containerId);
 
-      if (container) {
-        // If the container exists, clear its content
-        container.innerHTML = ''; // Clear the content of the container
-        // Initialize Vara
-        new Vara(
-          `#${containerId}`,
-          "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-          [
-            {
-              text: text,
-              fontSize: 50,
-              strokeWidth: 1.5,
-              delay: 1000,
-              textAlign: "center",
-              color: "black"
-            },
-          ]
-        );
-      }
-    }, []);
+  //     if (container) {
+  //       // If the container exists, clear its content
+  //       container.innerHTML = ''; // Clear the content of the container
+  //       // Initialize Vara
+  //       new Vara(
+  //         `#${containerId}`,
+  //         "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
+  //         [
+  //           {
+  //             text: text,
+  //             fontSize: 50,
+  //             strokeWidth: 1.5,
+  //             delay: 1000,
+  //             textAlign: "center",
+  //             color: "black"
+  //           },
+  //         ]
+  //       );
+  //     }
+  //   }, []);
   
-    return (
-      <div id={containerId} className=''></div>
-    );
-  }
+  //   return (
+  //     <div id={containerId} className=''></div>
+  //   );
+  // }
 
   const [showProjects, setShowProjects] = useState(false);
 
@@ -148,7 +149,7 @@ function App() {
       <div className='bg-white rounded-xl shadow-sm border flex gap-10 justify-center items-center p-10 flex flex-row '>
         <div className=''>
           <VaraText
-            text='Contact Me'
+            text={varaContent}
           />
         </div>
         <div className='flex flex-col'>

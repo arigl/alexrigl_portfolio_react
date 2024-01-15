@@ -74,7 +74,7 @@ function ProjectPopup(props: {
     };
   }, [props.showPopup, isVisible]);
 
-  console.log(projectData[props.currentProject].slideImages);
+  //console.log(projectData[props.currentProject].slideImages);
 
 
   return (

@@ -1,35 +1,63 @@
-import { useEffect } from 'react';
+import {useEffect } from 'react';
 import Vara from 'vara';
 
 function VaraText({ text }: { text: string }) {
+  const containerId = `vara-container-${text.replace(/\s/g, '')}`;
+  console.log("testing")
   useEffect(() => {
-    const container = document.getElementById("vara-container");
+    console.log(sessionStorage.getItem('animationTriggered'))
+    console.log("vara text")
+    const container = document.getElementById(containerId);
 
     if (container) {
-      new Vara(
-        "#vara-container",
-        "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-        [
-          {
-            text: text,
-            fontSize: 40,
-            strokeWidth: 0.7,
-          },
-        ]
-      );
+      // If the container exists, clear its content
+      console.log(container.innerHTML)
+      container.innerHTML = '';
 
-      return () => {
-        // Clear the content of the container when the component unmounts
-        container.innerHTML = '';
-      };
+      // Initialize Vara only if the animation has not been triggered in the current session
+      const animationTriggered = sessionStorage.getItem('animationTriggered');
+      if (!animationTriggered) {
+        new Vara(
+          `#${containerId}`,
+          "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
+          [
+            {
+              text: text,
+              fontSize: 50,
+              strokeWidth: 1.5,
+              delay: 1000,
+              textAlign: "center",
+              color: "black"
+            },
+          ]
+        )
+
+        // Set the flag in sessionStorage to indicate that the animation has been triggered in this session
+        sessionStorage.setItem('animationTriggered', 'true');
+      } else{
+        new Vara(
+          `#${containerId}`,
+          "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
+          [
+            {
+              text: text,
+              fontSize: 50,
+              strokeWidth: 1.5,
+              delay: 0,
+              textAlign: "center",
+              color: "black",
+              autoAnimation:true
+            },
+          ]
+        )
+      }
     }
-  }, []);
+  }, [containerId, text]);
 
-  return (
-    <div className='p-6 max-w-m mx-auto bg-white rounded-xl shadow-lg flex flex-col justify-center items-center space-x-4 mb-4'>
-      <div id="vara-container" className=""></div>
-    </div>
-  );
+  return <div id={containerId} className=''></div>;
 }
+
+// Rest of your component...
+
 
 export default VaraText;
