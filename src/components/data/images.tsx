@@ -23,6 +23,10 @@ const IMAGES = {
     sb3: new URL('/images/sb3.png', import.meta.url).href,
     sb4: new URL('/images/sb4.png', import.meta.url).href,
     sbLogo: new URL('/images/SBProjectImage.png', import.meta.url).href,
+    wf1: new URL('/images/wf1.png', import.meta.url).href,
+    wf2: new URL('/images/wf2.png', import.meta.url).href,
+    wf3: new URL('/images/wf3.png', import.meta.url).href,
+    wf4: new URL('/images/wf4.png', import.meta.url).href,
 }
 
 export default IMAGES

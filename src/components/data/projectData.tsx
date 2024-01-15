@@ -44,7 +44,7 @@ const projectData = [
       frameworks: ['SwiftUI','Mobile','UI Design'],
       website: 'https://apps.apple.com/us/app/witch-food/id1634313239',
       imagePath: IMAGES.witchFood,
-      slideImages: [IMAGES.px1,IMAGES.px2,IMAGES.px3,IMAGES.px4]
+      slideImages: [IMAGES.wf1,IMAGES.wf2,IMAGES.wf3,IMAGES.wf4]
     },
   ];
   

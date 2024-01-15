@@ -8,7 +8,9 @@ const jobData =
     'Designed website in Figma/Photoshop: Colloborated with Design and development studio, Religion Studios'
     ],
     // Brain Institute
-    ['Developed and shipped a research-based application with various experiments in Swift and Obj-C', 
+    ['Developed and shipped a research-based application with various experiments in Swift, SwiftUI, and Objective-C', 
+    'Used REST APIs in the production of the experiments, and implemented a reward structure though Firebase and Local Storage',
+    'Developed a wordpress website to market the product to book publishers and students',
     'Experience includes: REST APIs, UX Design, TestFlight, App Store Connect'
     ],
     // Thermofisher 
