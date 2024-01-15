@@ -169,7 +169,7 @@ function App() {
          numberOfPieces={party ? 500 : 0}
          onConfettiComplete={confetti => {
           setParty(false)
-          confetti.reset()
+          confetti?.reset?.();
         }}
          >
       </Confetti>
