@@ -12,12 +12,17 @@ import {useState, useEffect } from 'react';
 // import { ThemeProvider } from "@/components/theme-provider"
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
+// import React from 'react'
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 // import Carousel from './components/subcomponents/Carousel'
 
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [currentProject, setCurrentProject] = useState(0)
+  const { width, height } = useWindowSize()
+  const [party, setParty] = useState(false)
 
   function VaraText({ text }: { text: string }) {
     const containerId = `vara-container-${text.replace(/\s/g, '')}`; // Generate a unique ID based on the text
@@ -90,6 +95,7 @@ function App() {
       link.click();
 
       // Remove the link from the document
+      setParty(!party)
       document.body.removeChild(link);
     } catch (error) {
       console.error('Error downloading the file:', error);
@@ -155,6 +161,18 @@ function App() {
         </div>
         
       </div>
+      <Confetti 
+         width={width}
+         height={height * 2}
+         run={true}
+         recycle={false}
+         numberOfPieces={party ? 500 : 0}
+         onConfettiComplete={confetti => {
+          setParty(false)
+          confetti.reset()
+        }}
+         >
+      </Confetti>
     </div>
     {/* </ThemeProvider> */}
     <SpeedInsights/>
