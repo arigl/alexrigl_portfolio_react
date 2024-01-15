@@ -9,7 +9,7 @@ import ProjectPopup from './components/subcomponents/projectPopup'
 import projectData from './components/data/projectData'
 import Vara from 'vara';
 import {useState, useEffect } from 'react';
-import { ThemeProvider } from "@/components/theme-provider"
+// import { ThemeProvider } from "@/components/theme-provider"
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
 // import Carousel from './components/subcomponents/Carousel'
@@ -97,7 +97,7 @@ function App() {
   };
   return (
     <>
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    {/* <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme"> */}
     <div>
       <Intro></Intro>
       <div className={` ${showProjects ? 'transform scale-100 transition-transform duration-1000 ease-in-out' : 'transform scale-0'}`}>
@@ -156,7 +156,7 @@ function App() {
         
       </div>
     </div>
-    </ThemeProvider>
+    {/* </ThemeProvider> */}
     <SpeedInsights/>
     <Analytics/>
      
