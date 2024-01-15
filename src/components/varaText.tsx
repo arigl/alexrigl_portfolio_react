@@ -23,7 +23,7 @@ function VaraText({ text }: { text: string }) {
         container.innerHTML = '';
       };
     }
-  }, [text]);
+  }, []);
 
   return (
     <div className='p-6 max-w-m mx-auto bg-white rounded-xl shadow-lg flex flex-col justify-center items-center space-x-4 mb-4'>

@@ -3,7 +3,7 @@ import { Separator } from "@/components/ui/separator"
 // import { Button } from "@/components/ui/button"
 // import IMAGES from '@/images/IMAGES';
 // import internal from 'stream';
-
+import { motion, AnimatePresence } from "framer-motion";
 
 function Job(props: {
         jobDate: string;
@@ -55,7 +55,7 @@ function Job(props: {
                 </div>    
             )}
         </div>   
-        {expandToggle && (
+        {/* {expandToggle && (
             <div>
                 <Separator></Separator>
                 <h2 className='text-left font-bold mt-3 mb-3'>Responsibilities:</h2>
@@ -63,7 +63,25 @@ function Job(props: {
                     <li className='text-left' key={index}>{str}</li>
                 ))}
             </div>
+        )} */}
+        <AnimatePresence>
+        {expandToggle && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, delay: 0.15 }}
+          >
+            <Separator />
+            <h2 className='text-left font-bold mt-3 mb-3'>Responsibilities:</h2>
+            {taskArray.map((str, index) => (
+              <li className='text-left' key={index}>
+                {str}
+              </li>
+            ))}
+          </motion.div>
         )}
+      </AnimatePresence>
     </div>
 
   );

@@ -49,7 +49,7 @@ function App() {
           ]
         );
       }
-    }, [containerId, text]);
+    }, []);
   
     return (
       <div id={containerId} className=''></div>
