@@ -6,8 +6,8 @@ const logos = [
     icon: "react.svg",
   },
   {
-    name: "Next.js",
-    icon: "nextjs.svg",
+    name: "Three.js",
+    icon: "threejs.svg",
   },
   {
     name: "Tailwind CSS",
