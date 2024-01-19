@@ -55,29 +55,28 @@ export default function NewTools() {
 
   return (
     <div className="flex flex-col items-center">
-         {/* <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Tools & Frameworks</h1> */}
-         <motion.div 
-            className="relative max-w-md flex overflow-x-hidden mx-auto" 
-            whileHover={{
-                scale: 1.15,
-                transition: { duration: 1 },
-            }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
-            <div className="w-12 h-full absolute left-0 top-0 z-10 bg-gradient-to-r from-white to-white/0"></div>
-            <motion.div animate={animation1} className="flex" >
-                {logos.map((logo, index) => {
-                return <Logo key={index} name={logo.name} icon={logo.icon} />;
-                })}
-            </motion.div>
-            <motion.div animate={animation2} className="flex absolute top-0">
-                {logos.map((logo, index) => {
-                return <Logo key={index} name={logo.name} icon={logo.icon} />;
-                })}
-            </motion.div>
-            <div className="w-24 h-full absolute right-0 top-0 z-10 bg-gradient-to-l from-white to-white/0"></div>
+      {/* <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Tools & Frameworks</h1> */}
+      <motion.div
+        className="relative max-w-sm flex overflow-x-hidden mx-auto md:max-w-lg"
+        whileHover={{
+          scale: 1.15,
+          transition: { duration: 1 },
+        }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      >
+        <div className="w-12 h-full absolute left-0 top-0 z-10 bg-gradient-to-r from-white to-white/0"></div>
+        <motion.div animate={animation1} className="flex">
+          {logos.map((logo, index) => {
+            return <Logo key={index} name={logo.name} icon={logo.icon} />;
+          })}
         </motion.div>
+        <motion.div animate={animation2} className="flex absolute top-0">
+          {logos.map((logo, index) => {
+            return <Logo key={index} name={logo.name} icon={logo.icon} />;
+          })}
+        </motion.div>
+        <div className="w-24 h-full absolute right-0 top-0 z-10 bg-gradient-to-l from-white to-white/0"></div>
+      </motion.div>
     </div>
-   
   );
 }

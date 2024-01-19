@@ -1,3 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 #root {
   max-width: 800px;
   margin: 0 auto;
@@ -15,3 +19,5 @@
 .translate-y-full {
   transform: translateY(100%);
 }
+
+/* Add the following styles to your CSS or in a separate stylesheet */
