@@ -57,7 +57,7 @@ export default function NewTools() {
     <div className="flex flex-col items-center">
       {/* <h1 className='flex gap-1.5 text-xs items-center font-mono font-medium text-orange-500'>Tools & Frameworks</h1> */}
       <motion.div
-        className="relative max-w-sm flex overflow-x-hidden mx-auto md:max-w-lg"
+        className="relative max-w-xs flex overflow-x-hidden mx-auto sm:max-w-sm md:max-w-lg"
         whileHover={{
           scale: 1.15,
           transition: { duration: 1 },
