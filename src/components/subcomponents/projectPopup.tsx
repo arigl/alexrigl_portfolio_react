@@ -131,7 +131,7 @@ function ProjectPopup(props: {
               </div>
             </div>
             <div className="flex flex-col justify-between h-max mb-10 ml-10 mr-10">
-              <Separator className="mt-20 mb-5"></Separator>
+              <Separator className="mb-5 md:mt-20"></Separator>
               <div className="flex flex-row justify-between">
                 {props.currentProject == 0 && (
                   <button className="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded ml-2 opacity-50">
