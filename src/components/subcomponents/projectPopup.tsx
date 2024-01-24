@@ -65,7 +65,12 @@ function ProjectPopup(props: {
 
   useEffect(() => {
     // Disable scrolling when the popup is open
-    document.body.style.overflow = "hidden";
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      // Disable scrolling when the popup is open
+      document.body.style.overflow = "hidden";
+    }
 
     // Enable scrolling when the popup is closed
     return () => {
