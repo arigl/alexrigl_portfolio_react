@@ -64,18 +64,30 @@ function ProjectPopup(props: {
   }, [isClosing]);
 
   useEffect(() => {
-    // Disable scrolling when the popup is open
-    const isMobile = window.innerWidth <= 768;
+    // // Disable scrolling when the popup is open
+    // const isMobile = window.innerWidth <= 768;
 
-    if (isMobile) {
+    // if (isMobile) {
+    //   // Disable scrolling when the popup is open
+    //   console.log("mobile");
+    // } else {
+    //   document.body.style.overflow = "hidden";
+    // }
+
+    // // Enable scrolling when the popup is closed
+    // return () => {
+    //   document.body.style.overflow = "auto";
+    // };
+    if (props.showPopup) {
       // Disable scrolling when the popup is open
-      console.log("mobile");
-    } else {
       document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling when the popup is closed
+      document.body.style.overflow = "auto";
     }
 
-    // Enable scrolling when the popup is closed
     return () => {
+      // Cleanup: Enable scrolling when the component is unmounted
       document.body.style.overflow = "auto";
     };
   }, [props.showPopup, isVisible]);
@@ -89,6 +101,7 @@ function ProjectPopup(props: {
           className={`fixed bottom-0 left-0 w-screen h-screen flex flex-col bg-white bg-opacity-100 transition-transform duration-1000 ease-in-out md:p-20 ${
             isVisible ? "translate-y-0" : "translate-y-full"
           }`}
+          style={{ overflowY: "auto" }}
         >
           <div className="flex flex-col">
             <div className="flex flex-col gap-10 md:flex-row">
