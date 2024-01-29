@@ -54,7 +54,7 @@ function ProjectPopup(props: {
 
   useEffect(() => {
     if (isClosing) {
-      document.body.style.overflow = "auto";
+      //document.body.style.overflow = "auto";
       setTimeout(() => {
         setIsVisible(false);
         setIsClosing(false);
@@ -69,6 +69,8 @@ function ProjectPopup(props: {
 
     if (isMobile) {
       // Disable scrolling when the popup is open
+      console.log("mobile");
+    } else {
       document.body.style.overflow = "hidden";
     }
 

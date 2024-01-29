@@ -32,7 +32,7 @@ function Job(props: {
             width="75"
             height="75"
             alt="first image"
-            className="rounded-lg ml-2 mr-2 mb-2 object-cover"
+            className="rounded-lg ml-2 mr-2 mb-2 object-contain"
           />
           <div>
             <h1 className="font-bold">{props.companyName}</h1>
