@@ -101,7 +101,7 @@ function ProjectPopup(props: {
           className={`fixed bottom-0 left-0 w-screen h-screen flex flex-col bg-white bg-opacity-100 transition-transform duration-1000 ease-in-out md:p-20 ${
             isVisible ? "translate-y-0" : "translate-y-full"
           }`}
-          style={{ overflowY: "auto" }}
+          style={{ overflowY: "auto", overflowX: "hidden" }}
         >
           <div className="flex flex-col">
             <div className="flex flex-col gap-10 md:flex-row">
