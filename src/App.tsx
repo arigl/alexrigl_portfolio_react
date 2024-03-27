@@ -25,38 +25,6 @@ function App() {
   const [party, setParty] = useState(false);
   const varaContent = "Contact Me";
 
-  // function VaraText({ text }: { text: string }) {
-  //   const containerId = `vara-container-${text.replace(/\s/g, '')}`; // Generate a unique ID based on the text
-
-  //   useEffect(() => {
-  //     const container = document.getElementById(containerId);
-
-  //     if (container) {
-  //       // If the container exists, clear its content
-  //       container.innerHTML = ''; // Clear the content of the container
-  //       // Initialize Vara
-  //       new Vara(
-  //         `#${containerId}`,
-  //         "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-  //         [
-  //           {
-  //             text: text,
-  //             fontSize: 50,
-  //             strokeWidth: 1.5,
-  //             delay: 1000,
-  //             textAlign: "center",
-  //             color: "black"
-  //           },
-  //         ]
-  //       );
-  //     }
-  //   }, []);
-
-  //   return (
-  //     <div id={containerId} className=''></div>
-  //   );
-  // }
-
   const [showProjects, setShowProjects] = useState(false);
 
   useEffect(() => {
